@@ -1,7 +1,9 @@
+import { Title } from './Publication.styled';
+
 export const Publication = ({ item }) => {
   return (
     <article>
-      <h2>{item.title}</h2>
+      <Title>{item.title}</Title>
       <p>{item.text}</p>
     </article>
   );

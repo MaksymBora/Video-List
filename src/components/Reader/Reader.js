@@ -1,7 +1,8 @@
 import { Component } from 'react';
 import { Controls } from './Controls/Controls';
-import { Progress } from './Progress/Progress';
+
 import { Publication } from './Publication/Publication';
+import { Wrapper } from './Reader.styled';
 
 const LS_KEY = 'reader_item_index';
 
@@ -36,16 +37,14 @@ export default class Reader extends Component {
     const currentItem = items[index];
 
     return (
-      <div>
+      <Wrapper>
         <Controls
           current={index + 1}
           total={totalItems}
           onChange={this.changeIndex}
         />
-        <Progress current={index + 1} total={totalItems} />
-
         <Publication item={currentItem} />
-      </div>
+      </Wrapper>
     );
   }
 }

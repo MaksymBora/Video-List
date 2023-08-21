@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
-// import BeatLoader from 'react-spinners/ClipLoader';
 import { Triangle } from 'react-loader-spinner';
 import { PlayerWrapper, StyledPlayer, Spinner } from './Player.styled';
-
-// const override: CSSProperties = {
-//   display: 'block',
-//   margin: 'auto',
-// };
 
 export class Player extends Component {
   state = {
