@@ -2,6 +2,7 @@ import { Component } from 'react';
 import videos from '../videos.json';
 import { VideoList } from './VideoList/VideoList';
 import { Player } from './Player/Player';
+import { VideoListWrapper, VideoTitle, TitleWrapper } from './App.styled';
 
 
 
@@ -10,20 +11,24 @@ import { Player } from './Player/Player';
 export default class App extends Component {
   state = {
     selectedVideo: null,
+    selectedVideoName: '',
   };
 
 
-  selectVideo = link => {
-    this.setState({selectedVideo: link})
+  selectVideo = (link, title) => {
+    this.setState({selectedVideo: link, selectedVideoName: title})
 }
 
   render() {
     return (
-      <div style={ { padding: 24 } }>
-        <h1>Selected video: { this.state.selectedVideo }</h1> 
+      <VideoListWrapper >
+        <TitleWrapper>
+          <VideoTitle>Selected video: { this.state.selectedVideoName }</VideoTitle>
+        </TitleWrapper> 
+        
         <VideoList videos={ videos } onSelect={ this.selectVideo } />
         <Player url={ this.state.selectedVideo} />
-     </div>
+     </VideoListWrapper>
     )
   }
 }

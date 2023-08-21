@@ -6,4 +6,3 @@ export const Publication = ({ item }) => {
     </article>
   );
 };
-// test
