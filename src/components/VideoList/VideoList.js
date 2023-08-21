@@ -1,4 +1,4 @@
-import { Videos } from 'components/VideoModal/VideoModal';
+import { VideoModal } from 'components/VideoModal/VideoModal';
 import { VideoRenderList, VideoRenderItem } from './VideoList.styled';
 
 export const VideoList = ({ videos, onSelect, selectedVideo }) => {
@@ -9,7 +9,7 @@ export const VideoList = ({ videos, onSelect, selectedVideo }) => {
           key={video.id}
           onClick={() => onSelect(video.link, video.title)}
         >
-          <Videos item={video} />
+          <VideoModal item={video} />
         </VideoRenderItem>
       ))}
     </VideoRenderList>

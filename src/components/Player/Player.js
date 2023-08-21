@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
-import RingLoader from 'react-spinners/ClipLoader';
-import { PlayerWrapper, StyledPlayer } from './Player.styled';
+// import BeatLoader from 'react-spinners/ClipLoader';
+import { Triangle } from 'react-loader-spinner';
+import { PlayerWrapper, StyledPlayer, Spinner } from './Player.styled';
+
+// const override: CSSProperties = {
+//   display: 'block',
+//   margin: 'auto',
+// };
 
 export class Player extends Component {
   state = {
@@ -20,12 +26,17 @@ export class Player extends Component {
     return (
       <>
         {url && !isVideoLoaded && (
-          <RingLoader
-            color="#36d7b7"
-            size={80}
-            aria-label="Loading Spinner"
-            data-testid="loader"
-          />
+          <Spinner>
+            <Triangle
+              height="80"
+              width="80"
+              color="#4fa94d"
+              ariaLabel="triangle-loading"
+              wrapperStyle={{ margin: 'auto' }}
+              wrapperClassName="spinner"
+              visible={true}
+            />
+          </Spinner>
         )}
         {url && (
           <PlayerWrapper>

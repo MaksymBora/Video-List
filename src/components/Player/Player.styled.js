@@ -11,3 +11,9 @@ export const StyledPlayer = styled(ReactPlayer)`
   top: 0;
   left: 0;
 `;
+
+export const Spinner = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

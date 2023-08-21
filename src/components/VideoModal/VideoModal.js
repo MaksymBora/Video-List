@@ -17,15 +17,17 @@ const customStyles = {
     maxHeight: 'calc(100vh - 24px)',
     overflow: 'auto',
     width: '100%',
+    backgroundColor: 'transparent',
   },
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.8)',
+    overflow: 'auto',
   },
 };
 
 Modal.setAppElement('#root');
 
-export class Videos extends Component {
+export class VideoModal extends Component {
   state = {
     isModalOpen: false,
   };
