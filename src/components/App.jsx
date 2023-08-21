@@ -19,15 +19,15 @@ export default class App extends Component {
     this.setState({selectedVideo: link, selectedVideoName: title})
 }
 
-  render() {
+  render () {
+    const { selectedVideo } = this.state;
     return (
       <VideoListWrapper >
         <TitleWrapper>
           <VideoTitle>Selected video: { this.state.selectedVideoName }</VideoTitle>
         </TitleWrapper> 
-        
         <VideoList videos={ videos } onSelect={ this.selectVideo } />
-        <Player url={ this.state.selectedVideo} />
+        {/* <Player url={ this.state.selectedVideo} /> */}
      </VideoListWrapper>
     )
   }
